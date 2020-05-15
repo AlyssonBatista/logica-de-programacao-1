@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<h1>Receitas de Alysson</h1>
+
+<script>
+
+    var ingredientes = [];
+
+    var quantidade  = parseInt(prompt("Qual a quantidade de ingredientes?"));
+
+    var contador = 1;
+
+    while(contador <= quantidade)
+    {
+        var ingrediente = prompt("Qual o primeiro ingrediente você quer adicionar " + contador);
+        var achou = false;
+        for(var posicao1 = 0; posicao1 < quantidade; posicao1++)
+        {
+            
+            if(ingredientes[posicao1] == ingrediente)
+            {
+                achou = true;
+                break;
+            }
+
+        }
+        if(achou == false)
+        {
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+        
+        
+        
+    }
+    
+    for(var posicao = 0;posicao < quantidade; posicao++)
+    {
+        document.write(ingredientes[posicao]);
+        document.write("<br>");
+    }
+
+</script>

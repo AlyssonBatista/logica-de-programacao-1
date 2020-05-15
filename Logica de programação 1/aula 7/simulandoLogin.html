@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>")
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    var login  = "bds"
+    var senha = "alura";
+    
+    var contador1 = 1;
+    var contador2 = 1;
+     
+    while(contador1 <= 3){
+        var tentativalogin = prompt("Digite a login: ");
+        var tentativasenha = prompt("Digite a senha: ");
+        if(tentativasenha == senha){
+            mostra("Login e senha corretos")
+            break;
+        } 
+            
+      
+        contador1 = contador1 + 1;
+    }
+    if(tentativasenha != senha && tentativalogin != login){
+        mostra("Login e senha incorretos!");
+    }
+    
+
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function pularLinha(){
+        document.write("<br>")
+    }
+
+    function mostrar(frase){
+        document.write(frase);
+        pularLinha();
+    }
+
+    var anoAtual = 2020;
+    var colonização = 1500;
+
+    var geracois = (anoAtual - colonização)/28;
+
+    mostrar(Math.round(geracois) + " gerações desde de a colonização.")
+
+</script>

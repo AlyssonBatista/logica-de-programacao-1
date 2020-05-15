@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function pulaLinha(){
+
+        document.write("<br>");
+
+    }
+
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function imc(peso,altura){
+
+        var imc = peso / (altura * altura);
+
+        return imc;
+
+    }
+
+    var peso = parseFloat(prompt("Qual o seu peso: "));
+    var altura = parseFloat(prompt("Qual a sua altura: "));
+
+    imcCalculado = imc(peso,altura);
+    mostra("O seu imc é " +  imcCalculado );
+
+    if (imcCalculado < 10 )
+        {
+            mostra("Desnutrição Grau V");
+        }
+    
+    if(imcCalculado >= 10 && imcCalculado <= 12.9 )
+        {
+            mostra("Desnutrição Grau IV");
+        }
+
+    if(imcCalculado >= 13 && imcCalculado <= 15.9  )
+        {
+            mostra("Desnutrição Grau III");
+        }
+    
+    if(imcCalculado >= 16 && imcCalculado <= 16.9 )
+        {
+            mostra("Desnutrição Grau II");
+        }
+    
+    if(imcCalculado >= 17 && imcCalculado <= 18.4 )
+        {
+            mostra("Desnutrição Grau I");
+        }
+    
+    if(imcCalculado >= 18.5 && imcCalculado <= 24.9 )
+        {
+            mostramostra("Normal");
+        }
+    
+    if(imcCalculado >= 25 && imcCalculado <= 29.9 )
+        {
+            mostra("Pré-obesidade");
+        }
+
+    if(imcCalculado >= 30 && imcCalculado <= 34.5 )
+        {
+            mostra("Obesidade Grau I ");
+        }
+    if(imcCalculado >= 35 && imcCalculado <= 39.9 )
+        {
+            mostra("Obesidade Grau II(severa)");
+        }
+    
+    if(imcCalculado >= 40)
+        {
+            mostra("Obesidade Grau III(morbida)");
+        }
+</script>

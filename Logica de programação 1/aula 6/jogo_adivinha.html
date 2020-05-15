@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function pulalinha(){
+
+        document.write("<br>");
+    
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulalinha();
+    }
+
+     
+
+    function sorteia(){
+        
+        var n = prompt("Digite um numero maior que 0: ")
+        if(n > 0){
+            var numero = Math.round(Math.random() * n);
+        }else{
+            alert("Numero tem que ser maior que 0");
+        }
+        
+        return numero;
+
+    }
+
+    var numero_pensado = sorteia();
+    var numUsuario = parseInt(prompt("Adivinhe o numero:"));
+
+    if( numUsuario == numero_pensado){
+        mostra("Você acertou o numero pensado: " + numUsuario);
+    } else{
+        if(numUsuario > numero_pensado ){
+        mostra("Você errou, o numero é menor que o sorteado ");
+        }else{
+            mostra("Você errou, o numero é maior que o sorteado " );
+        }
+    }
+    
+     
+    
+
+</script>
